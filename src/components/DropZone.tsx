@@ -30,7 +30,14 @@ const DropZone: React.FC<Props> = ({ children, onDrop }) => {
   return (
     <div
       ref={ref}
-      className="relative w-full h-[600px] bg-gray-100 rounded-lg border-2 border-dashed border-gray-300"
+      className="relative w-full h-full bg-gray-100 rounded-lg border-2 border-dashed border-gray-300"
+      style={{
+        backgroundImage: `
+          linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+          linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)
+        `,
+        backgroundSize: '20px 20px',
+      }}
     >
       {children}
     </div>
